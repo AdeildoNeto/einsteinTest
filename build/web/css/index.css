@@ -1,0 +1,34 @@
+body{
+    background-color: #d9f7f5;
+}
+.nome{
+    color:indigo;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.dicas{
+    font-size: 35px;
+    color: darkblue;
+}
+.ui-selectonemenu{
+     width: 120px !important;
+}
+
+.ui-widget {
+    font-size: 15px;
+}
+
+
+.ui-widget-atributos{
+    color: gray;
+}
+.semBorda tr, .semBorda td {
+	border: none !important;
+}
+
+.ui-state-disabled{
+    opacity:1 !important;
+}
+

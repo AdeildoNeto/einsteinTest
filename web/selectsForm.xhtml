@@ -1,0 +1,348 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+
+
+    <p:panelGrid columns="6" style="margin: auto;  text-align: center;">
+
+        <p:panelGrid styleClass="semBorda" style="text-align: center; background-color: yellow; width: 25px" columns="1" >
+
+            <p:outputLabel styleClass="atributos" value="Cor"></p:outputLabel>
+            <p:outputLabel styleClass="atributos" value="Nacionalidade"></p:outputLabel>
+            <p:outputLabel styleClass="atributos" value="Bebida"></p:outputLabel>
+            <p:outputLabel styleClass="atributos" value="Cigarro"></p:outputLabel>
+            <p:outputLabel styleClass="atributos" value="Animal"></p:outputLabel>
+        </p:panelGrid>
+
+
+        <h:panelGroup layout="block" style="background-color: yellow">
+            <p:panelGrid styleClass="semBorda" style="margin: auto; width: 25px" columns="1" >
+
+
+                <p:outputLabel value="Casa 1" style="text-align: center"></p:outputLabel>
+                <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.corDaCasa}" styleClass="barraMenu" required="true">
+                    <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                    <f:selectItems value="#{einsteinForm.coresItem}"/>
+                </p:selectOneMenu>
+
+                <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.nacionalidade}" styleClass="barraMenu" required="true">
+                    <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                    <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+                </p:selectOneMenu>
+
+                <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.bebida}" styleClass="barraMenu" required="true">
+                    <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                    <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+                </p:selectOneMenu>
+
+                <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.cigarro}" styleClass="barraMenu" required="true">
+                    <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                    <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+                </p:selectOneMenu>
+
+                <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.animal}" styleClass="barraMenu" required="true">
+                    <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                    <f:selectItems value="#{einsteinForm.animaisItem}"/>
+                </p:selectOneMenu>
+
+
+            </p:panelGrid>
+        </h:panelGroup>
+
+        <p:panelGrid styleClass="semBorda" style="margin: auto; width: 25px" columns="1">
+
+            <p:outputLabel value="Casa 2" style="text-align: center"></p:outputLabel>
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+            </p:selectOneMenu>
+        </p:panelGrid>
+
+        <p:panelGrid styleClass="semBorda" style="margin: auto; width: 25px" columns="1">
+
+            <p:outputLabel value="Casa 3" style="text-align: center"></p:outputLabel>
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+            </p:selectOneMenu>
+
+
+        </p:panelGrid>
+
+        <p:panelGrid styleClass="semBorda" style="margin: auto; width: 25px" columns="1">
+
+            <p:outputLabel value="Casa 4" style="text-align: center"></p:outputLabel>
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+
+            </p:selectOneMenu>
+
+        </p:panelGrid>
+
+        <p:panelGrid styleClass="semBorda" style="margin: auto; width: 25px" columns="1">
+
+            <p:outputLabel value="Casa 5" style="text-align: center"></p:outputLabel>
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+
+            </p:selectOneMenu>
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+
+            </p:selectOneMenu>
+
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+
+            </p:selectOneMenu>
+
+        </p:panelGrid>
+
+    </p:panelGrid>
+
+
+    <!--
+            <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.corDaCasa}" styleClass="barraMenu" required="true">
+    
+    
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+    
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.corDaCasa}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.coresItem}"/>
+    
+            </p:selectOneMenu>
+    
+    
+          nacionalidades
+    
+            <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.nacionalidade}" styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+            </p:selectOneMenu>
+           
+    
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.nacionalidade}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.nacionalidadesItem}"/>
+    
+            </p:selectOneMenu>
+    
+            BEBIDAS 
+    
+            <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.bebida}" styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+            </p:selectOneMenu>
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.bebida}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.bebidasItem}"/>
+    
+            </p:selectOneMenu>
+    
+            Cigarro 
+    
+    
+            <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.cigarro}" styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+            </p:selectOneMenu>
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.cigarro}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.cigarrosItem}"/>
+    
+            </p:selectOneMenu>
+    
+    
+            ANIMAL
+    
+            <p:selectOneMenu value="#{coreBean.casas.primeiraCasa.animal}" styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+            </p:selectOneMenu>
+            <p:selectOneMenu value="#{coreBean.casas.segundaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.terceiraCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quartaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+    
+            </p:selectOneMenu>
+    
+            <p:selectOneMenu value="#{coreBean.casas.quintaCasa.animal}"  styleClass="barraMenu" required="true">
+                <f:ajax listener="#{coreBean.realizarVerificacao()}" render="@form" immediate="false"/>
+                <f:selectItems value="#{einsteinForm.animaisItem}"/>
+    
+            </p:selectOneMenu>
+    
+    -->
+
+
+
+
+
+
+</ui:composition>
