@@ -20,6 +20,26 @@ body{
     font-size: 15px;
 }
 
+.Amarela{
+   
+    background: yellow;
+}
+.Vermelha{
+   
+    background-color: darkred;
+    color: white;
+}
+
+.Azul {
+    background-color: darkblue;
+    color: white;
+}
+
+.Verde
+{
+    background-color: green;
+     color: white;
+}
 
 .ui-widget-atributos{
     color: gray;
@@ -32,3 +52,6 @@ body{
     opacity:1 !important;
 }
 
+.barraMenu{
+    width: 120px;
+}

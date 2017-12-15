@@ -13,17 +13,37 @@
         <h2 class="nome"> Einstein's test</h2>
 
         <h:form>
-            <h:outputScript rendered="#{coreBean.venceu}">
-                alert("Você venceu!");
-            </h:outputScript>
+            <p:dialog style="text-align: center" header="Você desistiu!" widgetVar="dlg1" minHeight="40" visible="#{coreBean.desistiu}">
+                <h:outputText value="Para iniciar um novo jogo, clique no botão abaixo."/><br></br><br></br>
+                <h:commandButton value="Quero tentar de novo!" action="#{coreBean.reiniciarJogo()}">
+                    <f:ajax render="@form" immediate="false"></f:ajax>
+                </h:commandButton>
+            </p:dialog>
+
+            <p:dialog style="text-align: center" header="Você venceu!" widgetVar="dlg1" minHeight="40" visible="#{coreBean.venceu}">
+
+                <h:outputText value="Se você chegou até aqui, quer dizer que este código está funcionando! Parabéns e obrigado!"/><br></br><br></br>
+                <f:ajax render="@form" immediate="false" listener="#{coreBean.reiniciarJogo()}"></f:ajax>
+
+            </p:dialog>
+
+
 
             <ui:include src="selectsForm.xhtml"></ui:include>
             <ui:include src="dicas.xhtml"></ui:include>
+
+
+
+
+            <h:panelGroup layout="block" style="text-align: center">
+                <h:commandButton value="Desisto!" action="#{coreBean.desistir()}">
+                    <f:ajax render="@form"></f:ajax>
+                </h:commandButton>
+            </h:panelGroup>
+
         </h:form>
-        
-        <h:panelGroup layout="block" style="text-align: center">
-        <p:button value="Desisto!"></p:button>
-       </h:panelGroup>
+
+
     </h:body>
 </html>
 

@@ -5,16 +5,12 @@
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
     xmlns:p="http://primefaces.org/ui">
 
-    <h:outputLabel value="Dicas:" styleClass="dicas"></h:outputLabel>
+    
 
-    <!--
-    <h:selectManyCheckbox value="#{coreBean.checkboxes}">
-            <f:selectItems value="#{dicas.dicas}"></f:selectItems>
-        </h:selectManyCheckbox>
-    -->
+    <h:outputLabel value="Dicas:" styleClass="dicas"></h:outputLabel>
     <p:selectManyCheckbox value="#{coreBean.checkboxes}" layout="grid" columns="2">
         <f:selectItems value="#{dicas.dicas}"></f:selectItems>
     </p:selectManyCheckbox>
-    
+
 
 </ui:composition>
